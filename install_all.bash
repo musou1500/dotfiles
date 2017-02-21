@@ -38,6 +38,11 @@ if [ ! -d "$dein_repo_dir/github.com/Shougo/dein.vim" ]; then
   git clone "https://github.com/Shougo/dein.vim" "$dein_repo_dir/github.com/Shougo/dein.vim"
 fi
 
+
+if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
+  git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
+fi
+
 echo "Done! reload now? [y/n]"
 read reload_now
 if [ $reload_now = "Y" ] || [ $reload_now = "y" ]; then
