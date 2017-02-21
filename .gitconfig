@@ -1,0 +1,14 @@
+[user]
+	email = musou1500@gmail.com
+	name = musou1500
+[core]
+	editor = vim
+	ui = auto
+[alias]
+	co = checkout
+	sandbox = ! ! git checkout sandbox && git checkout -b sandbox develop && echo "created new branch 'sandbox'"
+	sandbox-reset = !git sandbox || git reset --hard develop
+[url "https://"]
+	insteadOf = git://
+[http]
+	sslVerify = false
