@@ -44,6 +44,7 @@ backup_and_create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
 backup_and_create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
 backup_and_create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 backup_and_create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
+backup_and_create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 
 # load bash configuration to export xdg variables
 source "$BASH_CONFIG_FILEPATH"
