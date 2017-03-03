@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+shopt -s checkwinsize  # 端末のウィンドウサイズを${COLUMNS}と${LINES}に反映
+shopt -s no_empty_cmd_completion # 入力が空の状態では補完・PATH検索をしない
+
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
