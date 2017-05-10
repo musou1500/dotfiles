@@ -51,3 +51,9 @@ export SCM_CHECK=true
 if [ -f "$BASH_IT/bash_it.sh" ]; then
   source $BASH_IT/bash_it.sh
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/dr-darao/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/dr-darao/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/dr-darao/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/dr-darao/Downloads/google-cloud-sdk/completion.bash.inc'; fi
