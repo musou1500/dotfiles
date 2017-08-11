@@ -53,7 +53,7 @@ if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
 
-if [ ! -d "$XDG_CONFIG_HOME/bash_it" ]; then
+if [ ! -d "$XDG_CONFIG_HOME/bash" ]; then
   echo "Install Bash-it custom configuration"
   git clone "https://github.com/musou1500/bash-config.git" "$XDG_CONFIG_HOME/bash"
 fi
@@ -76,8 +76,8 @@ if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
 fi
 
-if [ ! -d "$HOME/phpbrew" ]; then
-  echo "Install phpbrew to $HOME/phpbrew"
+if [ ! -d "$HOME/.phpbrew" ]; then
+  echo "Install phpbrew to $HOME/.phpbrew"
   curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
   chmod +x phpbrew
   mv phpbrew $HOME/bin
