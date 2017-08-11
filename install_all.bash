@@ -76,15 +76,6 @@ if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
 fi
 
-if [ ! -d "$HOME/.phpbrew" ]; then
-  echo "Install phpbrew to $HOME/.phpbrew"
-  curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
-  chmod +x phpbrew
-  mv phpbrew $HOME/bin
-  mkdir -p $HOME/phpbrew
-  phpbrew init
-fi
-
 if confirm "Done! Reload bash configuration now?"; then
   source "$BASH_CONFIG_FILEPATH"
 fi
