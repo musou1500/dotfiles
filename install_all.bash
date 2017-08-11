@@ -16,20 +16,19 @@ function confirm {
   done
 }
 
-function backup_and_create_symlink {
+function create_symlink {
   src=$1
   dst=$2
-  echo $dst
-  if [ -f $dst ]; then
+  if [ -f $dst ] && confirm "Backup $dst?"; then
     mv "$dst" "$dst.org"
     echo "backup to $dst to $dst.org"
   fi
 
-  ln -s $src $dst
+  ln -sf $src $dst
 }
 
 echo "Make symlinks..."
-scriptdir=`dirname $0`
+scriptdir=$HOME/dotfiles
 
 case $OSTYE in
   darwin*)
@@ -40,11 +39,11 @@ case $OSTYE in
     ;;
 esac
 
-backup_and_create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
-backup_and_create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
-backup_and_create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
-backup_and_create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
-backup_and_create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
+create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
+create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
+create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
+create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
+create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 
 # load bash configuration to export xdg variables
 source "$BASH_CONFIG_FILEPATH"
@@ -75,6 +74,15 @@ fi
 if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   echo "Install nvm"
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
+fi
+
+if [ ! -d "$HOME/phpbrew" ]; then
+  echo "Install phpbrew to $HOME/phpbrew"
+  curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+  chmod +x phpbrew
+  mv phpbrew $HOME/bin
+  mkdir -p $HOME/phpbrew
+  phpbrew init
 fi
 
 if confirm "Done! Reload bash configuration now?"; then
