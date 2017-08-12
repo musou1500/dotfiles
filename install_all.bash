@@ -78,7 +78,10 @@ fi
 
 if [ ! -d "$HOME/.phpenv" ]; then
   echo "Install phpenv"
-  git clone "git://github.com/phpenv/phpenv.git" "$HOME/.phpenv"
+  git clone "git@github.com:CHH/phpenv.git" "$scriptdir/phpenv-installer"
+  $scriptdir/phpenv-installer/bin/phpenv-install.sh
+  git clone "https://github.com/CHH/php-build.git" "$HOME/.phpenv/plugins/php-build"
+  rm -rf $scriptdir/phpenv-installer
 fi
 
 if confirm "Done! Reload bash configuration now?"; then
