@@ -76,6 +76,11 @@ if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
 fi
 
+if [ ! -d "$HOME/.phpenv" ]; then
+  echo "Install phpenv"
+  git clone "git://github.com/phpenv/phpenv.git" "$HOME/.phpenv"
+fi
+
 if confirm "Done! Reload bash configuration now?"; then
   source "$BASH_CONFIG_FILEPATH"
 fi
