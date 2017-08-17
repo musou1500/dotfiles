@@ -43,6 +43,7 @@ create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
 create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
 create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
+create_symlink "$scriptdir/.git_template" "$HOME/.git_template"
 create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 
 # load bash configuration to export xdg variables
