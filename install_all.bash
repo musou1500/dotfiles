@@ -30,7 +30,7 @@ function create_symlink {
 echo "Make symlinks..."
 scriptdir=$HOME/dotfiles
 
-case $OSTYE in
+case $OSTYPE in
   darwin*)
     BASH_CONFIG_FILEPATH="$HOME/.bash_profile"
     ;;

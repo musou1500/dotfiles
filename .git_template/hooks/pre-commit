@@ -16,9 +16,5 @@ git@gitlab.com[:/]*)
     must user.name hiraga-y
     must user.email hiraga-y@ml-fl.com
     ;;
-*)
-    must user.name musou1500
-    must user.email musou1500@gmail.com
-    ;;
 esac
 exit 0
