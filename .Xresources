@@ -1,0 +1,7 @@
+#include "dotfiles/gruvbox-dark.xresources"
+
+URxvt*font: xft:Ricty\ Diminished\ for\ Powerline:style=Regular:size=11:antialias=true
+URxvt.font:              xft:Ricty\ Diminished\ for\ Powerline:size=11:antialiase=true:hinting=true
+URxvt.boldFont:          xft:Ricty\ Diminished\ for\ Powerline:bold:size=11:antialiase=true:hinting=true
+URxvt.italicFont:        xft:Ricty\ Diminished\ for\ Powerline:italic:size=11:antialiase=true:hinting=true
+URxvt.bolditalicFont:    xft:Ricty\ Diminished\ for\ Powerline:bold:italic:size=11:antialiase=true:hinting=true

@@ -45,6 +45,7 @@ create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
 create_symlink "$scriptdir/.git_template" "$HOME/.git_template"
 create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
+create_symlink "$scriptdir/.Xresources" "$HOME/.Xresources"
 
 # load bash configuration to export xdg variables
 source "$BASH_CONFIG_FILEPATH"
