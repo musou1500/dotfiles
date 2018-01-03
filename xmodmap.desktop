@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=xmodmap /home/dr-darao/.Xmodmap
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name=xmodmap
