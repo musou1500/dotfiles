@@ -1,0 +1,6 @@
+#include "dotfiles/gruvbox-dark.xresources"
+URxvt*font: xft:MigMix\ 1M,MigMix\ 1M\ for\ Powerline:style=Regular:size=10:antialias=true
+URxvt.font:              xft:MigMix\ 1M,MigMix\ 1M\ for\ Powerline:size=10:antialiase=true:hinting=true
+URxvt.boldFont:          xft:MigMix\ 1M,MigMix\ 1M\ for\ Powerline:bold:size=10:antialiase=true:hinting=true
+URxvt.italicFont:        xft:MigMix\ 1M,MigMix\ 1M\ for\ Powerline:italic:size=10:antialiase=true:hinting=true
+URxvt.bolditalicFont:    xft:MigMix\ 1M,MigMix\ 1M\ for\ Powerline:bold:italic:size=10:antialiase=true:hinting=true

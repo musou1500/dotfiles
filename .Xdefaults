@@ -1,7 +1,14 @@
 #include "dotfiles/gruvbox-dark.xresources"
+! URxvt.font: xft: MigMix 1M, xft: MigMix 1M for Powerline:style=Regular:size=10:antialias=true
 
-URxvt*font: xft:Ricty\ Diminished\ for\ Powerline:style=Regular:size=10:antialias=true
-URxvt.font:              xft:Ricty\ Diminished\ for\ Powerline:size=10:antialiase=true:hinting=true
-URxvt.boldFont:          xft:Ricty\ Diminished\ for\ Powerline:bold:size=10:antialiase=true:hinting=true
-URxvt.italicFont:        xft:Ricty\ Diminished\ for\ Powerline:italic:size=10:antialiase=true:hinting=true
-URxvt.bolditalicFont:    xft:Ricty\ Diminished\ for\ Powerline:bold:italic:size=10:antialiase=true:hinting=true
+! URxvt.xftAntialias:     true
+!URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=12
+!URxvt.font: xft:Anonymous Pro for Powerline:pixelsize=12
+! URxvt.font: xft:Inconsolata for Powerline:pixelsize=12
+urxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=10, \
+            xft:unifont:style=Medium
+
+! URxvt.font: xft:Ricty Diminished for Powerline:style=Regular:size=10:antialiase=true:hinting=true
+! URxvt.boldFont: xft:Ricty Diminished for Powerline:style=Bold:size=10:antialiase=true:hinting=true
+! URxvt.italicFont: xft:MigMix 1M, xft:MigMix 1M for Powerline:italic:size=10:antialiase=true:hinting=true
+! URxvt.bolditalicFont: xft:MigMix 1M, xft:MigMix 1M for Powerline:bold:italic:size=10:antialiase=true:hinting=true

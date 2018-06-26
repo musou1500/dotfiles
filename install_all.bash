@@ -27,6 +27,9 @@ function create_symlink {
   ln -sf $src $dst
 }
 
+echo "install powerline-status"
+pip3 install --user powerline-statu
+
 echo "Make symlinks..."
 scriptdir=$HOME/dotfiles
 
