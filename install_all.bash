@@ -54,6 +54,12 @@ create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
 # load bash configuration to export xdg variables
 source "$BASH_CONFIG_FILEPATH"
 
+if [ ! -d "$XDG_DATA_HOME/powerline" ]; then
+  echo "Install powerline configuration"
+  git clone "https://github.com/musou1500/powerline-config.git" "$XDG_DATA_HOME/powerline"
+fi
+
+
 if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   echo "Install Bash-it"
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
