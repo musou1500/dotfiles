@@ -9,3 +9,4 @@ set menu-complete-display-prefix on
 set mark-directories on
 set mark-symlinked-directories on
 TAB: menu-complete
+set bell-style none
