@@ -5,6 +5,10 @@
 	editor = vim
 	ui = auto
 [alias]
+  m = merge
+  p = push
+  cm = commit
+  st = status
 	co = checkout
 	sandbox = ! ! git checkout sandbox && git checkout -b sandbox develop && echo "created new branch 'sandbox'"
 	sandbox-reset = !git sandbox || git reset --hard develop
