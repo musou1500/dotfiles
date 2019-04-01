@@ -65,6 +65,13 @@ if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
 
+if [ ! -d "$XDG_DATA_HOME/rbenv" ]; then
+  echo "Install rbenv"
+  git clone "git clone https://github.com/rbenv/rbenv.git" "$XDG_DATA_HOME/rbenv"
+  cd $XDG_DATA_HOME/rbenv && src/configure && make -C src
+  cd -
+fi
+
 if [ ! -d "$XDG_CONFIG_HOME/bash" ]; then
   echo "Install Bash-it custom configuration"
   git clone "https://github.com/musou1500/bash-config.git" "$XDG_CONFIG_HOME/bash"
