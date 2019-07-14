@@ -48,17 +48,14 @@ export SCM_CHECK=true
 # after enabling or disabling aliases, plugins, and completions.
 # export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
-# Load Bash It
-if [ -f "$BASH_IT/bash_it.sh" ]; then
-  source $BASH_IT/bash_it.sh
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export NVM_DIR="$HOME/.local/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$XDG_DATA_HOME/rbenv/bin:$PATH"
-export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
-eval "$(rbenv init -)"
+# Load Bash It
+if [ -f "$BASH_IT/bash_it.sh" ]; then
+  source $BASH_IT/bash_it.sh
+fi
+
