@@ -65,15 +65,6 @@ if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
 
-if [ ! -d "$XDG_DATA_HOME/rbenv" ]; then
-  echo "Install rbenv"
-  git clone "https://github.com/rbenv/rbenv.git" "$XDG_DATA_HOME/rbenv"
-  cd $XDG_DATA_HOME/rbenv && src/configure && make -C src
-  cd -
-
-  git clone https://github.com/sstephenson/ruby-build.git $XDG_DATA_HOME/rbenv/plugins/ruby-build
-fi
-
 if [ ! -d "$XDG_CONFIG_HOME/bash" ]; then
   echo "Install Bash-it custom configuration"
   git clone "https://github.com/musou1500/bash-config.git" "$XDG_CONFIG_HOME/bash"
@@ -84,13 +75,6 @@ if [ ! -d "$XDG_CONFIG_HOME/nvim" ]; then
   echo "Install neovim configuration"
   git clone "https://github.com/musou1500/nvim-config.git" "$XDG_CONFIG_HOME/nvim"
 fi
-
-dein_repo_dir="$XDG_CACHE_HOME/dein/repos"
-if [ ! -d "$dein_repo_dir/github.com/Shougo/dein.vim" ]; then
-  echo "Install dein.vim"
-  git clone "https://github.com/Shougo/dein.vim" "$dein_repo_dir/github.com/Shougo/dein.vim"
-fi
-
 
 if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   echo "Install nvm"
