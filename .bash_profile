@@ -59,3 +59,4 @@ if [ -f "$BASH_IT/bash_it.sh" ]; then
   source $BASH_IT/bash_it.sh
 fi
 
+export PATH="$HOME/.cargo/bin:$PATH"
