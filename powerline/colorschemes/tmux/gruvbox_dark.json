@@ -1,0 +1,60 @@
+{
+	"groups": {
+		"active_window_status": {
+			"fg": "gruvbox:light1",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"window_status": {
+			"fg": "gray70",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"activity_status": {
+			"fg": "gruvbox:neutral_yellow",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"bell_status": {
+			"fg": "gruvbox:bright_red",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"window": {
+			"fg": "gray6",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"window:divider": {
+			"fg": "gray4",
+			"bg": "gruvbox:dark1",
+			"attrs": []
+		},
+		"window:current": {
+			"fg": "gruvbox:dark1",
+			"bg": "gruvbox:light1",
+			"attrs": []
+		},
+		"window_name": {
+			"fg": "gruvbox:dark1",
+			"bg": "gruvbox:light1",
+			"attrs": [
+				"bold"
+			]
+		},
+		"session": {
+			"fg": "gruvbox:dark1",
+			"bg": "gruvbox:light1",
+			"attrs": [
+				"bold"
+			]
+		},
+		"session:prefix": {
+			"fg": "gruvbox:dark1",
+			"bg": "gruvbox:light1",
+			"attrs": [
+				"bold"
+			]
+		}
+	}
+}

@@ -46,41 +46,32 @@ create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
 create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
 create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
-create_symlink "$scriptdir/.git_template" "$HOME/.git_template"
 create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 create_symlink "$scriptdir/.Xresources" "$HOME/.Xresources"
 create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
-
-# load bash configuration to export xdg variables
-source "$BASH_CONFIG_FILEPATH"
-
-if [ ! -d "$XDG_CONFIG_HOME/powerline" ]; then
-  echo "Install powerline configuration"
-  git clone "https://github.com/musou1500/powerline-config.git" "$XDG_CONFIG_HOME/powerline"
-fi
-
 
 if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   echo "Install Bash-it"
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
 
-if [ ! -d "$XDG_CONFIG_HOME/bash" ]; then
-  echo "Install Bash-it custom configuration"
-  git clone "https://github.com/musou1500/bash-config.git" "$XDG_CONFIG_HOME/bash"
-fi
+# load bash configuration to export xdg variables
+source "$BASH_CONFIG_FILEPATH"
 
-
-if [ ! -d "$XDG_CONFIG_HOME/nvim" ]; then
-  echo "Install neovim configuration"
-  git clone "https://github.com/musou1500/nvim-config.git" "$XDG_CONFIG_HOME/nvim"
-fi
+create_symlink "$scriptdir/powerline" "$XDG_CONFIG_HOME/powerline"
+create_symlink "$scriptdir/bash" "$XDG_CONFIG_HOME/bash"
+create_symlink "$scriptdir/nvim" "$XDG_CONFIG_HOME/nvim"
 
 if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   echo "Install nvm"
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
 fi
 
-if confirm "Done! Reload bash configuration now?"; then
-  source "$BASH_CONFIG_FILEPATH"
+if [ ! -d "$HOME/.rbenv" ]; then
+  echo "Install rbenv"
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 fi
+
+# enable plugins
+bash-it enable plugin rbenv nvm
+bash-it enable completion bash-it
