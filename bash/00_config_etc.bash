@@ -8,6 +8,10 @@ alias ion="ionic"
 alias ls='ls --color=auto'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+export NVM_DIR="${XDG_DATA_HOME}/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 eval $(dircolors $HOME/.dircolors)
 if [ -f "$HOME/.bashrc.mine" ]; then
   source "$HOME/.bashrc.mine"
