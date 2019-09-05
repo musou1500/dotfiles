@@ -53,7 +53,7 @@ Plug 'godlygeek/tabular'
 Plug 'gabrielelana/vim-markdown'
 
 Plug 'mhinz/vim-startify'
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'rust-lang/rust.vim'
