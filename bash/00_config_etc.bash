@@ -17,3 +17,4 @@ if [ -f "$HOME/.bashrc.mine" ]; then
   source "$HOME/.bashrc.mine"
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
