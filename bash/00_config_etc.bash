@@ -6,6 +6,7 @@ alias g="git"
 alias xopen="xdg-open"
 alias ion="ionic"
 alias ls='ls --color=auto'
+alias git='hub'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
