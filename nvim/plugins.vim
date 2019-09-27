@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/tagbar-phpctags', { 'for': 'php', 'do': 'chmod +x bin/phpctags'}
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'rhysd/vim-clang-format'
 
 " handlebars
 Plug 'mustache/vim-mustache-handlebars'
