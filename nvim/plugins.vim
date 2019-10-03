@@ -22,6 +22,7 @@ Plug 'GutenYe/json5.vim'
 
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
+      \ 'tag': '0.2.7'
       \ }
 
 " nim
