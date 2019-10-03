@@ -51,3 +51,5 @@ export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 if [ -f "$BASH_IT/bash_it.sh" ]; then
   source $BASH_IT/bash_it.sh
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
