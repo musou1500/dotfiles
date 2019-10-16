@@ -78,7 +78,6 @@ Plug 'mhartington/nvim-typescript', {
 Plug 'Shougo/echodoc.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " Plug 'neomake/neomake'
 
