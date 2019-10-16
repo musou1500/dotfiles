@@ -49,6 +49,7 @@ Plug 'honza/vim-snippets'
 " Plug 'Shougo/neosnippet-snippets'
 " Plug 'Shougo/neosnippet'
 Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/denite.nvim'
 
 Plug 'godlygeek/tabular'
 Plug 'gabrielelana/vim-markdown'
