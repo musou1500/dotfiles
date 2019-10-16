@@ -50,6 +50,7 @@ Plug 'honza/vim-snippets'
 " Plug 'Shougo/neosnippet-snippets'
 " Plug 'Shougo/neosnippet'
 Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/denite.nvim'
 
 Plug 'godlygeek/tabular'
 Plug 'gabrielelana/vim-markdown'
@@ -78,7 +79,6 @@ Plug 'mhartington/nvim-typescript', {
 Plug 'Shougo/echodoc.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " Plug 'neomake/neomake'
 

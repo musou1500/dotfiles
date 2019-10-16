@@ -73,5 +73,5 @@ if [ ! -d "$HOME/.rbenv" ]; then
 fi
 
 # enable plugins
-bash-it enable plugin rbenv nvm
+bash-it enable plugin rbenv
 bash-it enable completion bash-it
