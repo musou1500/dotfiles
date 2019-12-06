@@ -50,21 +50,18 @@ create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 create_symlink "$scriptdir/.Xresources" "$HOME/.Xresources"
 create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
 
-if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
+if [ ! -d "$HOME/.bash_it" ]; then
   echo "Install Bash-it"
-  git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
+  git clone "https://github.com/Bash-it/bash-it.git" "$HOME/.bash_it"
 fi
 
-# load bash configuration to export xdg variables
-source "$BASH_CONFIG_FILEPATH"
+create_symlink "$scriptdir/powerline" "$HOME/.config/powerline"
+create_symlink "$scriptdir/bash" "$HOME/.config/bash"
+create_symlink "$scriptdir/nvim" "$HOME/.config/nvim"
 
-create_symlink "$scriptdir/powerline" "$XDG_CONFIG_HOME/powerline"
-create_symlink "$scriptdir/bash" "$XDG_CONFIG_HOME/bash"
-create_symlink "$scriptdir/nvim" "$XDG_CONFIG_HOME/nvim"
-
-if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
+if [ ! -d "$HOME/.nvm" ]; then
   echo "Install nvm"
-  git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
+  git clone "https://github.com/creationix/nvm.git" "$HOME/.nvm"
 fi
 
 if [ ! -d "$HOME/.rbenv" ]; then

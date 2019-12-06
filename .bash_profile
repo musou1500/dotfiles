@@ -9,7 +9,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # Path to the bash it configuration
-export BASH_IT="$XDG_DATA_HOME/bash_it"
+export BASH_IT="$HOME/.bash_it"
 export BASH_IT_CUSTOM="$XDG_CONFIG_HOME/bash"
 
 # Lock and Load a custom theme file
