@@ -11,6 +11,7 @@
   st = status
   co = checkout
   cl = clone
+  ps = push
 	sandbox = ! ! git checkout sandbox && git checkout -b sandbox develop && echo "created new branch 'sandbox'"
 	sandbox-reset = !git sandbox || git reset --hard develop
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
