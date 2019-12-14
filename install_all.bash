@@ -50,13 +50,14 @@ create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
 create_symlink "$scriptdir/.Xresources" "$HOME/.Xresources"
 create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
 
+XDG_CONFIG_HOME=$HOME/.config
+XDG_DATA_HOME=$HOME/.local/share
+
+
 if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   echo "Install Bash-it"
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
-
-# load bash configuration to export xdg variables
-source "$BASH_CONFIG_FILEPATH"
 
 create_symlink "$scriptdir/powerline" "$XDG_CONFIG_HOME/powerline"
 create_symlink "$scriptdir/bash" "$XDG_CONFIG_HOME/bash"
