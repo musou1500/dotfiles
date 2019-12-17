@@ -7,6 +7,7 @@
 [alias]
   m = merge
   p = push
+  ad = add
   cm = commit
   st = status
   co = checkout
