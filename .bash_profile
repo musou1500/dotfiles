@@ -52,4 +52,3 @@ if [ -f "$BASH_IT/bash_it.sh" ]; then
   source $BASH_IT/bash_it.sh
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

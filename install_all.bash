@@ -73,6 +73,4 @@ if [ ! -d "$HOME/.rbenv" ]; then
   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 fi
 
-# enable plugins
-bash-it enable plugin rbenv
-bash-it enable completion bash-it
+echo "Installation suceeded!"

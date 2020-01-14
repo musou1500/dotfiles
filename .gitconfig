@@ -17,9 +17,5 @@
 	sandbox = ! ! git checkout sandbox && git checkout -b sandbox develop && echo "created new branch 'sandbox'"
 	sandbox-reset = !git sandbox || git reset --hard develop
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
-[url "git@github.com:"]
-  insteadOf = https://github.com/
-[http]
-  sslVerify = false
 [init]
   templatedir = ~/.git_template
