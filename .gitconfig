@@ -2,7 +2,7 @@
 	email = musou1500@gmail.com
 	name = musou1500
 [core]
-	editor = vim
+	editor = nvim
 	ui = auto
 [alias]
   m = merge
