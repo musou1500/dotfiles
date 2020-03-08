@@ -8,6 +8,8 @@ function! s:denite_my_settings() abort
         \ denite#do_map('do_action', 'vsplit')
   nnoremap <silent><buffer><expr> q
         \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> <ESC>
+        \ denite#do_map('quit')
   nnoremap <silent><buffer><expr> i
         \ denite#do_map('open_filter_buffer')
   nnoremap <silent><buffer><expr> <Space>
