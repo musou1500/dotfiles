@@ -67,10 +67,6 @@ Plug 'morhetz/gruvbox'
 
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'Shougo/echodoc.vim'
 
