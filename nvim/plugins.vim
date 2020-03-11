@@ -41,7 +41,6 @@ Plug 'rhysd/vim-textobj-ruby'
 
 
 Plug 'digitaltoad/vim-pug'
-Plug 'jiangmiao/auto-pairs'
 Plug 'cespare/vim-toml'
 Plug 'scrooloose/nerdtree'
 
