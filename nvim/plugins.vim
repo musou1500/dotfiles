@@ -47,10 +47,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-" Plug 'Shougo/neosnippet-snippets'
-" Plug 'Shougo/neosnippet'
 Plug 'Shougo/neoinclude.vim'
-Plug 'Shougo/denite.nvim'
 
 Plug 'godlygeek/tabular'
 Plug 'gabrielelana/vim-markdown'
@@ -71,7 +68,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/echodoc.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Plug 'neomake/neomake'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()

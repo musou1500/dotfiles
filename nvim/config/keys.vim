@@ -17,8 +17,13 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
-nnoremap <Leader>o :Denite file/rec<CR>
-nnoremap <Leader>g :Denite grep<CR>
+nnoremap <Leader>o :GFiles<CR>
+nnoremap <Leader>O :GFiles!<CR>
+
+nnoremap <Leader>g :Rg<Space>
+nnoremap <Leader>G :Rg!<Space>
+nnoremap <Leader>b :Buffers<CR>
+
 nnoremap <Leader>, :tabnew \| e $MYVIMRC<CR>
 
 " TODO: move to ftplugin
