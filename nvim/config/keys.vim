@@ -28,9 +28,3 @@ nnoremap <Leader>, :tabnew \| e $MYVIMRC<CR>
 
 " TODO: move to ftplugin
 nnoremap <Leader> p :Prettier<CR>
-
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>

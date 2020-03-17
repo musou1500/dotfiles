@@ -39,7 +39,6 @@ Plug 'ElmCast/elm-vim'
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-ruby'
 
-
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 Plug 'scrooloose/nerdtree'
@@ -68,5 +67,7 @@ Plug 'Shougo/echodoc.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'raimondi/delimitmate'
 
 call plug#end()
