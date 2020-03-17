@@ -53,7 +53,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'mhinz/vim-startify'
 Plug 'HerringtonDarkholme/yats.vim'
 
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'rust-lang/rust.vim'
 Plug 'kana/vim-tabpagecd'
 
