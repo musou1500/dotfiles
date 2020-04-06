@@ -68,9 +68,4 @@ if [ ! -d "$XDG_DATA_HOME/nvm" ]; then
   git clone "https://github.com/creationix/nvm.git" "$XDG_DATA_HOME/nvm"
 fi
 
-if [ ! -d "$HOME/.rbenv" ]; then
-  echo "Install rbenv"
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-fi
-
 echo "Installation suceeded!"
