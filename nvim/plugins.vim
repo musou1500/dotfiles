@@ -19,6 +19,7 @@ Plug 'mustache/vim-mustache-handlebars'
 " js syntax
 Plug 'pangloss/vim-javascript'
 Plug 'GutenYe/json5.vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
