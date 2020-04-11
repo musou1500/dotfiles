@@ -22,7 +22,13 @@ function! s:delete_buffers(lines)
   execute 'bwipeout' join(map(a:lines, {_, line -> split(line)[0]}))
 endfunction
 
-command! BD call fzf#run(fzf#wrap({
+function! s:delete_other_buffers()
+  let bufinfos = filter(getbufinfo(), {_, val -> empty(val.windows) && val.bufnr != bufnr("%")})
+  execute 'bwipeout' join(map(bufinfos, {_, val -> val.bufnr}))
+endfunction
+
+command! BDeleteOther call s:delete_other_buffers()
+command! BDelete call fzf#run(fzf#wrap({
   \ 'source': s:list_buffers(),
   \ 'sink*': { lines -> s:delete_buffers(lines) },
   \ 'options': '--multi --reverse --bind alt-a:select-all'

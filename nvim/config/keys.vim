@@ -22,7 +22,9 @@ nnoremap <Leader>O :GFiles!<CR>
 
 nnoremap <Leader>g :Rg<Space>
 nnoremap <Leader>G :Rg!<Space>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>bl :Buffers<CR>
+nnoremap <Leader>bo :BDeleteOther<CR>
+nnoremap <Leader>bd :BDelete<CR>
 
 nnoremap <Leader>, :tabnew \| e $MYVIMRC<CR>
 
