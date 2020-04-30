@@ -1,0 +1,42 @@
+global !p
+def create_cout_stmt(snip):
+    num_params = snip.context['num_params']
+    snippet_body =  'cout << '
+    snippet_body += ' << '.join([f'${i+1}' for i in range(num_params)])
+    snippet_body += ' << \'${' + str(num_params + 1) + ':\\n}\''
+    snippet_body += ';'
+    snip.expand_anon(snippet_body)
+
+def create_cin_stmt(snip):
+    num_params = snip.context['num_params']
+    snippet_body =  'cin >> '
+    snippet_body += ' >> '.join([f'${i+1}' for i in range(num_params)])
+    snippet_body += ';'
+    snip.expand_anon(snippet_body)
+
+def create_var_dec(snip):
+    num_params = snip.context['num_params']
+    snippet_body =  '${1:int} '
+    snippet_body += ', '.join([f'${i+2}' for i in range(num_params)])
+    snippet_body += ';'
+    snip.expand_anon(snippet_body)
+endglobal
+
+context "{'num_params': 1}"
+post_jump "create_cout_stmt(snip)"
+snippet "p(\d+)" "cout << ...;" br
+`!p snip.context['num_params'] = int(match.group(1))`
+endsnippet
+
+context "{'num_params': 1}"
+post_jump "create_cin_stmt(snip)"
+snippet "in(\d+)" "cin >> ...;" br
+`!p snip.context['num_params'] = int(match.group(1))`
+endsnippet
+
+context "{'num_params': 1}"
+post_jump "create_var_dec(snip)"
+snippet "var(\d+)" "var_type a, b...;" br
+`!p snip.context['num_params'] = int(match.group(1))`
+endsnippet
+
