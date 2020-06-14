@@ -5,6 +5,7 @@
 	editor = nvim
 	ui = auto
 [alias]
+  br = !git branch -a | fzf | xargs git checkout
   m = merge
   p = push
   ad = add
