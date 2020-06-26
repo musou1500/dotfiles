@@ -44,9 +44,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 Plug 'scrooloose/nerdtree'
 
-" use forked version until #1187 is closed
-" https://github.com/SirVer/ultisnips/issues/1187
-Plug 'musou1500/ultisnips'
+Plug 'SirVer/ultisnips'
 
 Plug 'honza/vim-snippets'
 Plug 'Shougo/neoinclude.vim'
