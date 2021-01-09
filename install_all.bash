@@ -53,11 +53,12 @@ create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
 XDG_CONFIG_HOME=$HOME/.config
 XDG_DATA_HOME=$HOME/.local/share
 
-
 if [ ! -d "$XDG_DATA_HOME/bash_it" ]; then
   echo "Install Bash-it"
   git clone "https://github.com/Bash-it/bash-it.git" "$XDG_DATA_HOME/bash_it"
 fi
+
+mkdir -p $XDG_CONFIG_HOME
 
 create_symlink "$scriptdir/powerline" "$XDG_CONFIG_HOME/powerline"
 create_symlink "$scriptdir/bash" "$XDG_CONFIG_HOME/bash"
