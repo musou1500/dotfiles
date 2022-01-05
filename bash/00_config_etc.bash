@@ -7,6 +7,7 @@ alias r='cd $(ghq root)/$(ghq list | fzf)'
 alias xopen="xdg-open"
 alias ion="ionic"
 alias git='hub'
+alias tf='terraform'
 
 case $OSTYPE in
   darwin*)
