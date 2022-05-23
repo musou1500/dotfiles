@@ -4,13 +4,9 @@ shopt -s checkwinsize  # 端末のウィンドウサイズを${COLUMNS}と${LINE
 shopt -s no_empty_cmd_completion # 入力が空の状態では補完・PATH検索をしない
 # shopt -s autocd
 
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-
 # Path to the bash it configuration
-export BASH_IT="$XDG_DATA_HOME/bash_it"
-export BASH_IT_CUSTOM="$XDG_CONFIG_HOME/bash"
+export BASH_IT="$HOME/.bash_it"
+export BASH_IT_CUSTOM="$HOME/.config/bash"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -46,13 +42,8 @@ export SCM_CHECK=true
 
 # (Advanced): Uncomment this to make Bash-it reload itself automatically
 # after enabling or disabling aliases, plugins, and completions.
-export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
+# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 # Load Bash It
 if [ -f "$BASH_IT/bash_it.sh" ]; then
   source $BASH_IT/bash_it.sh
 fi
-
-
-# Added by serverless binary installer
-export PATH="$HOME/.serverless/bin:$PATH"
-
