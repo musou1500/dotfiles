@@ -9,6 +9,7 @@ if (exists('+colorcolumn'))
     highlight ColorColumn ctermbg=9
 endif
 
+set termguicolors
 set number
 set cmdheight=1
 set laststatus=2
