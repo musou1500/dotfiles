@@ -1,49 +1,56 @@
 #!/usr/bin/env bash
 
-shopt -s checkwinsize  # 端末のウィンドウサイズを${COLUMNS}と${LINES}に反映
-shopt -s no_empty_cmd_completion # 入力が空の状態では補完・PATH検索をしない
-# shopt -s autocd
+# http://qiita.com/ssh0/items/a9956a74bff8254a606a
+if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" ]]; then
+  # get the IDs
+  create_new_session="Create New Session"
+  ID="`tmux list-sessions`"
+  if [[ -n "$ID" ]]; then
+    ID=$ID$'\n'$create_new_session
+  else
+    ID=$create_new_session
+  fi
 
-# Path to the bash it configuration
-export BASH_IT="$HOME/.bash_it"
-export BASH_IT_CUSTOM="$HOME/.config/bash"
-
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
-export BASH_IT_THEME='mytheme'
-
-# (Advanced): Change this to the name of your remote repo if you
-# cloned bash-it with a remote other than origin such as `bash-it`.
-# export BASH_IT_REMOTE='bash-it'
-
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
-
-# Don't check mail when opening terminal.
-unset MAILCHECK
-
-# Change this to your console based IRC client of choice.
-export IRC_CLIENT='irssi'
-
-# Set this to the command you use for todo.txt-cli
-export TODO="t"
-
-# Set this to false to turn off version control status checking within the prompt for all themes
-export SCM_CHECK=true
-
-# Set Xterm/screen/Tmux title with only a short hostname.
-# Uncomment this (or set SHORT_HOSTNAME to something else),
-# Will otherwise fall back on $HOSTNAME.
-#export SHORT_HOSTNAME=$(hostname -s)
-
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/djl/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
-
-# (Advanced): Uncomment this to make Bash-it reload itself automatically
-# after enabling or disabling aliases, plugins, and completions.
-# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
-# Load Bash It
-if [ -f "$BASH_IT/bash_it.sh" ]; then
-  source $BASH_IT/bash_it.sh
+  ID="`echo "$ID" | fzf | cut -d: -f1`"
+  if [[ "$ID" = "$create_new_session" ]]; then
+    exec tmux new-session
+  elif [[ -n "$ID" ]]; then
+    exec tmux attach-session -t "$ID"
+  fi
 fi
+
+shopt -s no_empty_cmd_completion
+eval "$(starship init bash)"
+
+alias ks="echo '(｀・ω・´) カスは貴様だ！'"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias g='git'
+alias r='cd $(ghq root)/$(ghq list | fzf)'
+alias xopen="xdg-open"
+alias ion="ionic"
+alias git='hub'
+alias tf='terraform'
+
+case $OSTYPE in
+  darwin*)
+    alias ls='ls -G'
+    ;;
+  *)
+    alias ls='ls --color=auto'
+    ;;
+esac
+
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+if [ -f "$HOME/.bashrc.mine" ]; then
+  source "$HOME/.bashrc.mine"
+fi
+
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
