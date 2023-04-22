@@ -24,19 +24,6 @@ if [ -f "$HOME/.bashrc.mine" ]; then
   source "$HOME/.bashrc.mine"
 fi
 
-if [ -f "$HOME/.dircolors" ]; then
-  case $OSTYPE in
-    darwin*)
-      eval $(gdircolors "$HOME/.dircolors")
-      ;;
-    *)
-      eval $(dircolors "$HOME/.dircolors")
-      ;;
-  esac
-fi
-
-export LSCOLORS=ExGxcxdxCxegedabagacad
-
 # http://qiita.com/ssh0/items/a9956a74bff8254a606a
 if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" ]]; then
   # get the IDs
