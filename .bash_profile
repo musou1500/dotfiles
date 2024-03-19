@@ -36,6 +36,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+source ~/ble.sh/out/ble.sh
+
 # http://qiita.com/ssh0/items/a9956a74bff8254a606a
 if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" && $VSCODE_RESOLVING_ENVIRONMENT != "1" ]]; then
   # get the IDs
