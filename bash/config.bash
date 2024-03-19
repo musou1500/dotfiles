@@ -38,7 +38,7 @@ fi
 export LSCOLORS=ExGxcxdxCxegedabagacad
 
 # http://qiita.com/ssh0/items/a9956a74bff8254a606a
-if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" ]]; then
+if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" && $VSCODE_RESOLVING_ENVIRONMENT != "1" ]]; then
   # get the IDs
   create_new_session="Create New Session"
   ID="`tmux list-sessions`"
