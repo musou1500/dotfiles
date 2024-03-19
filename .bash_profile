@@ -17,9 +17,11 @@ alias tf='terraform'
 case $OSTYPE in
   darwin*)
     alias ls='ls -G'
+    eval "$(gdircolors)"
     ;;
   *)
     alias ls='ls --color=auto'
+    eval "$(dircolors)"
     ;;
 esac
 
@@ -37,6 +39,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 source ~/ble.sh/out/ble.sh
+
+ble-face filename_@=none
+bleopt filename_ls_colors="$LS_COLORS"
 
 # http://qiita.com/ssh0/items/a9956a74bff8254a606a
 if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" && $VSCODE_RESOLVING_ENVIRONMENT != "1" ]]; then
