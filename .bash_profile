@@ -16,7 +16,7 @@ alias tf='terraform'
 
 case $OSTYPE in
   darwin*)
-    alias ls='ls -G'
+    alias ls='gls --color=auto'
     eval "$(gdircolors)"
     ;;
   *)
