@@ -43,25 +43,18 @@ case $OSTYPE in
 esac
 
 create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
-create_symlink "$scriptdir/.dircolors" "$HOME/.dircolors"
 create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
 create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
-create_symlink "$scriptdir/.Xresources" "$HOME/.Xresources"
-create_symlink "$scriptdir/.Xmodmap" "$HOME/.Xmodmap"
 mkdir -p "$HOME/.config"
 create_symlink "$scriptdir/powerline" "$HOME/.config/powerline"
 create_symlink "$scriptdir/bash" "$HOME/.config/bash"
 create_symlink "$scriptdir/nvim" "$HOME/.config/nvim"
 
-if [ ! -d "$HOME/.bash_it" ]; then
-  echo "Install Bash-it"
-  git clone "https://github.com/Bash-it/bash-it.git" "$HOME/.bash_it"
-fi
 
 if [ ! -d "$HOME/.fzf" ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+  ~/.fzf/install --no-update-rc
 fi
 
 if [ ! -d "$HOME/.nvm" ]; then
@@ -69,8 +62,7 @@ if [ ! -d "$HOME/.nvm" ]; then
   git clone "https://github.com/creationix/nvm.git" "$HOME/.nvm"
 fi
 
-source $BASH_CONFIG_FILEPATH
-bash-it enable plugin nvm fzf
+curl -sS https://starship.rs/install.sh | sh
 
 echo "Installation suceeded!"
 echo "source $BASH_CONFIG_FILEPATH"
