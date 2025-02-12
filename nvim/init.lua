@@ -2,7 +2,6 @@ vim.opt.compatible = false
 vim.opt.modifiable = true
 vim.cmd('filetype plugin indent off')
 
-
 if vim.fn.empty(vim.fn.glob('~/.config/nvim/autoload/plug.vim')) == 1 then
   vim.cmd([[
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim

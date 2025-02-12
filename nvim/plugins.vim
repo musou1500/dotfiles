@@ -2,21 +2,20 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plug 'vim-jp/vimdoc-ja'
+Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'scrooloose/nerdcommenter'
+Plug 'github/copilot.vim'
 
 Plug 'prettier/vim-prettier', {
       \ 'do': 'npm install',
       \ }
 
 Plug 'scrooloose/nerdtree'
-
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/neoinclude.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'rust-lang/rust.vim'
