@@ -8,8 +8,8 @@ nnoremap <Leader>q :<C-u>q<CR>
 
 " filer
 nnoremap <Leader>f :NERDTreeToggle<CR>
-nmap <Leader>/ :call NERDComment('n', 'Toggle')<CR>
-xmap <Leader>/ :call NERDComment('x', 'Toggle')<CR>
+nmap <Leader>/ :call nerdcommenter#Comment('n', 'Toggle')<CR>
+xmap <Leader>/ :call nerdcommenter#Comment('x', 'Toggle')<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)

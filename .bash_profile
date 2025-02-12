@@ -9,7 +9,6 @@ alias v="nvim"
 alias g='git'
 alias r='cd $(ghq root)/$(ghq list | fzf)'
 alias xopen="xdg-open"
-alias git='hub'
 alias tf='terraform'
 
 if ! shopt -oq posix; then

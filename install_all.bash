@@ -50,7 +50,7 @@ mkdir -p "$HOME/.config"
 create_symlink "$scriptdir/powerline" "$HOME/.config/powerline"
 create_symlink "$scriptdir/bash" "$HOME/.config/bash"
 create_symlink "$scriptdir/nvim" "$HOME/.config/nvim"
-
+create_symlink "$scriptdir/starship.toml" "$HOME/.config/starship.toml"
 
 if [ ! -d "$HOME/.fzf" ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
