@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# [[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
+
 shopt -s no_empty_cmd_completion
 
 alias ks="echo '(｀・ω・´) カスは貴様だ！'"
@@ -39,7 +41,7 @@ fi
 
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
-source "$HOME/.rye/env"
+# source "$HOME/.rye/env"
 
 # nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -50,9 +52,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ble
-source ~/.local/share/blesh/ble.sh
-ble-face filename_@=none
-bleopt filename_ls_colors="$LS_COLORS"
+# bleopt filename_ls_colors="$LS_COLORS"
 
 # tmux
 # http://qiita.com/ssh0/items/a9956a74bff8254a606a
@@ -74,4 +74,4 @@ if [[ -z $TMUX && $- == *i* && $TERM_PROGRAM != "vscode" && $VSCODE_RESOLVING_EN
   fi
 fi
 
-
+# [[ ! ${BLE_VERSION-} ]] || ble-attach

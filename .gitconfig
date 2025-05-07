@@ -18,3 +18,9 @@
 	sandbox = ! ! git checkout sandbox && git checkout -b sandbox develop && echo "created new branch 'sandbox'"
 	sandbox-reset = !git sandbox || git reset --hard develop
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
