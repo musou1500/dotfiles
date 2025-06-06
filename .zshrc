@@ -8,6 +8,9 @@ alias xopen="xdg-open"
 alias tf='terraform'
 alias ls='ls --color=auto'
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
