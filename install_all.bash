@@ -33,16 +33,8 @@ pipx install powerline-status
 echo "Make symlinks..."
 scriptdir=$HOME/dotfiles
 
-case $OSTYPE in
-  darwin*)
-    BASH_CONFIG_FILEPATH="$HOME/.bash_profile"
-    ;;
-  *)
-    BASH_CONFIG_FILEPATH="$HOME/.bashrc"
-    ;;
-esac
-
-create_symlink "$scriptdir/.bash_profile" "$BASH_CONFIG_FILEPATH"
+create_symlink "$scriptdir/.zprofile" "$HOME/.zprofile"
+create_symlink "$scriptdir/.zshrc" "$HOME/.zshrc"
 create_symlink "$scriptdir/.tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$scriptdir/.gitconfig" "$HOME/.gitconfig"
 create_symlink "$scriptdir/.inputrc" "$HOME/.inputrc"
@@ -51,11 +43,6 @@ create_symlink "$scriptdir/powerline" "$HOME/.config/powerline"
 create_symlink "$scriptdir/bash" "$HOME/.config/bash"
 create_symlink "$scriptdir/nvim" "$HOME/.config/nvim"
 create_symlink "$scriptdir/starship.toml" "$HOME/.config/starship.toml"
-
-if [ ! -d "$HOME/.fzf" ]; then
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install --no-update-rc
-fi
 
 if [ ! -d "$HOME/.nvm" ]; then
   echo "Install nvm"
