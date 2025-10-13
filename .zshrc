@@ -13,6 +13,8 @@ bindkey "^[[1;5D" backward-word
 
 autoload -Uz compinit && compinit
 
+typeset -U path PATH
+
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
@@ -20,6 +22,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 . "$HOME/.cargo/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
