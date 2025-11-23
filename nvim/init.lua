@@ -15,6 +15,10 @@ vim.cmd('source ~/.config/nvim/plugins.vim')
 for _, f in pairs(vim.fn.split(vim.fn.glob('~/.config/nvim/config/*.vim'), '\n')) do
   vim.cmd('source ' .. f)
 end
+
+require("tabscope").setup({})
+require("bufferline").setup{}
+
 -- " Automatically close preview window.
 -- autocmd CompleteDone * pclose
 vim.cmd('autocmd CompleteDone * pclose')

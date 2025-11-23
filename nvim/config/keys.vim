@@ -7,7 +7,7 @@ nnoremap <Leader>t :<C-u>tabnew<CR>
 nnoremap <Leader>q :<C-u>q<CR>
 
 " filer
-nnoremap <Leader>f :NERDTreeToggle<CR>
+nmap <Leader>f <Cmd>NERDTreeToggle<CR>
 nmap <Leader>/ :call nerdcommenter#Comment('n', 'Toggle')<CR>
 xmap <Leader>/ :call nerdcommenter#Comment('x', 'Toggle')<CR>
 
@@ -26,19 +26,20 @@ nnoremap <Leader>bl :Buffers<CR>
 nnoremap <Leader>bo :BDeleteOther<CR>
 nnoremap <Leader>bd :BDelete<CR>
 
-nnoremap <Leader>, :tabnew \| e $MYVIMRC<CR>
+nnoremap <Leader>, :e $MYVIMRC<CR>
 
 " TODO: move to ftplugin
 nnoremap <Leader> p :Prettier<CR>
 
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader><S-Tab> <Plug>AirlineSelectPrevTab
-nmap <leader><Tab> <Plug>AirlineSelectNextTab
+nmap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
+nmap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
+nmap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
+nmap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
+nmap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
+nmap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
+nmap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
+nmap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
+nmap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
+nmap <silent><Tab> :BufferLineCycleNext<CR>
+nmap <silent><S-Tab> :BufferLineCyclePrev<CR>
+

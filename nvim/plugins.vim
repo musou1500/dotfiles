@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plug 'vim-jp/vimdoc-ja'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
@@ -14,6 +15,7 @@ Plug 'prettier/vim-prettier', {
       \ }
 
 Plug 'scrooloose/nerdtree'
+
 Plug 'honza/vim-snippets'
 
 Plug 'vim-airline/vim-airline'
@@ -24,6 +26,11 @@ Plug 'morhetz/gruvbox'
 
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'airblade/vim-gitgutter'
+Plug 'backdround/tabscope.nvim'
+
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'

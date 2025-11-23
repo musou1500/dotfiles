@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
       \ 'coc-rls',
       \ 'coc-ultisnips',
       \ 'coc-emmet',
+      \ 'coc-explorer',
       \ ]
 let g:coc_snippet_next = '<tab>'
 inoremap <silent><expr> <TAB>
