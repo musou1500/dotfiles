@@ -8,6 +8,7 @@ alias xopen="xdg-open"
 alias tf='terraform'
 alias ls='ls --color=auto'
 
+setopt share_history
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
