@@ -32,7 +32,6 @@ Plug 'backdround/tabscope.nvim'
 
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
-Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 

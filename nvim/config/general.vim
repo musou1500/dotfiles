@@ -1,5 +1,5 @@
 set mouse=a
-set guioptions+=a
+" set guioptions+=a
 
 set backspace=indent,eol,start
 set cursorline
