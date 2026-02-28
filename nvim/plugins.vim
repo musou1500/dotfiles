@@ -15,11 +15,8 @@ Plug 'prettier/vim-prettier', {
       \ }
 
 Plug 'scrooloose/nerdtree'
-
 Plug 'honza/vim-snippets'
-
 Plug 'vim-airline/vim-airline'
-Plug 'rust-lang/rust.vim'
 
 " カラースキーム
 Plug 'morhetz/gruvbox'
