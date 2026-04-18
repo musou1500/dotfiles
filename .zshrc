@@ -1,7 +1,7 @@
 alias ks="echo '(｀・ω・´) カスは貴様だ！'"
-alias vim="nvim"
-alias vi="nvim"
-alias v="nvim"
+# alias vim="nvim"
+# alias vi="nvim"
+# alias v="nvim"
 alias g='git'
 alias r='cd $(ghq root)/$(ghq list | fzf)'
 alias xopen="xdg-open"
@@ -31,3 +31,4 @@ source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [ -f /etc/zsh_command_not_found ]; then
   . /etc/zsh_command_not_found
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

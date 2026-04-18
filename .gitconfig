@@ -2,7 +2,7 @@
 	email = musou1500@gmail.com
 	name = musou1500
 [core]
-	editor = nvim
+	editor = vim
 	ui = auto
 [alias]
   br = !git branch -a | fzf | xargs git checkout
