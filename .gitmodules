@@ -16,3 +16,9 @@
 [submodule "vim/pack/plugins/start/copilot.vim"]
 	path = vim/pack/plugins/start/copilot.vim
 	url = https://github.com/github/copilot.vim
+[submodule "vim/pack/plugins/start/vimdoc-ja"]
+	path = vim/pack/plugins/start/vimdoc-ja
+	url = https://github.com/vim-jp/vimdoc-ja
+[submodule "vim/pack/plugins/start/gruvbox-material"]
+	path = vim/pack/plugins/start/gruvbox-material
+	url = https://github.com/sainnhe/gruvbox-material

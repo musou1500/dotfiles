@@ -2,7 +2,14 @@ set nocompatible
 set number
 set termguicolors
 set background=dark
-colorscheme gruvbox
+set mouse=a
+set list
+set cul
+set helplang=ja,en
+let g:gruvbox_material_background = 'hard'
+colorscheme gruvbox-material
 
 " fzfはインストールしている前提
 set rtp+=~/.fzf
+set rtp+=~/code/v9filer.vim
+
