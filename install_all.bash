@@ -44,10 +44,8 @@ create_symlink "$scriptdir/bash" "$HOME/.config/bash"
 create_symlink "$scriptdir/nvim" "$HOME/.config/nvim"
 create_symlink "$scriptdir/starship.toml" "$HOME/.config/starship.toml"
 
-if [ ! -d "$HOME/.nvm" ]; then
-  echo "Install nvm"
-  git clone "https://github.com/creationix/nvm.git" "$HOME/.nvm"
-fi
+echo "Install pnpm"
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 curl -sS https://starship.rs/install.sh | sh
 

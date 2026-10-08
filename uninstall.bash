@@ -32,8 +32,4 @@ if [ -d "$HOME/.fzf" ]; then
   rm -rf $HOME/.fzf
 fi
 
-if [ -d "$HOME/.nvm" ]; then
-  rm -rf $HOME/.nvm
-fi
-
 echo "Uninstallation suceeded!"
